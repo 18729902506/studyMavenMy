@@ -23,6 +23,7 @@ public class ThreadTest4 implements Runnable {
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
+            //打印线程的名字 Thread.currentThread().getName()
             System.out.println(Thread.currentThread().getName() + "拿到了第" + ticketNums-- + "票");
         }
     }
