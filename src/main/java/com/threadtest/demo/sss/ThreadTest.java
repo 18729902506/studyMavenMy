@@ -3,6 +3,7 @@ package com.threadtest.demo.sss;
 /***
  * 创建线程方式1：继承Thread类，重写run()方法，调用start()开启线程
  * 总结：注意，线程开启不一定立即执行，由CPU调度执行
+ * 不建议使用，避免oop单继承局限性
  * @author shang
  */
 public class ThreadTest extends Thread {
