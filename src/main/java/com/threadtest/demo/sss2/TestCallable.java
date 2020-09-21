@@ -10,6 +10,7 @@ import java.util.concurrent.*;
 /***
  * @author shang
  * 利用Callable改造下载图片的案例
+ * 实现Callable和实现Runnable接口的区别：实现Callable接口，是有返回值的，它的返回值就是重写的call()的返回值
  * 1、实现Callable接口，需要返回值类型
  * 2、重写call方法，需要抛出异常
  * 3、创建目标对象
