@@ -9,7 +9,7 @@ package com.threadtest.demo.sss;
 public class ThreadTest extends Thread {
 
     @Override
-    public void run(){
+    public void run() {
         //run方法线程体
         for (int i = 0; i < 200; i++) {
             System.out.println("我在看代码------" + i);

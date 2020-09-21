@@ -8,13 +8,15 @@ package com.threadtest.demo.sss;
  */
 public class ThreadTest4 implements Runnable {
 
-    /**票数*/
+    /**
+     * 票数
+     */
     private Integer ticketNums = 10;
 
     @Override
     public void run() {
-        while (true){
-            if (ticketNums <= 0){
+        while (true) {
+            if (ticketNums <= 0) {
                 break;
             }
             //模拟延时
@@ -41,12 +43,13 @@ public class ThreadTest4 implements Runnable {
      * sss拿到了第1票
      * bbb拿到了第0票
      * aaa拿到了第0票
+     *
      * @param args
      */
     public static void main(String[] args) {
         ThreadTest4 ticket = new ThreadTest4();
-        new Thread(ticket,"sss").start();
-        new Thread(ticket,"aaa").start();
-        new Thread(ticket,"bbb").start();
+        new Thread(ticket, "sss").start();
+        new Thread(ticket, "aaa").start();
+        new Thread(ticket, "bbb").start();
     }
 }
