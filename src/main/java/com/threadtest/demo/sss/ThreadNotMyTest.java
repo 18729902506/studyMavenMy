@@ -94,6 +94,7 @@ public class ThreadNotMyTest {
     }
 
     /***
+     * 函数式编程的写法
      * lambda
      */
     @Test
