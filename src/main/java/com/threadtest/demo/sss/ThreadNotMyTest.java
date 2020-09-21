@@ -8,6 +8,9 @@ import java.util.concurrent.*;
 /***
  * thread.join()方法：通常都是main线程等到其他多个线程执行完毕后再继续进行，其他多个线程之间并不需要互相等待
  * join()方法必须在start()方法后调用才有意义，
+ * java中如何让多线程按照自己指定的顺序来执行？其实就是通过Thread.join()来实现的
+ * 通过join()来等待线程执行的结果，类似于future的功能
+ * join()方法底层就是通过wait()/notifyAll()来实现线程的通信从而达到线程阻塞的目的
  * @author shang
  */
 public class ThreadNotMyTest {
