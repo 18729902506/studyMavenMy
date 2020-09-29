@@ -49,13 +49,19 @@ public class LambdaTest {
 
         /***
          * 匿名内部类推导过去就是lambda表达式
-         * 类，接口都不要了，其次方法也不用要，方法的参数要
+         * 类，接口都不要了，其次方法也不用要，方法的参数要，空参或者有一个以上的参数都要进行保留
          * 5、用lambda表达式简化
          * 接口只有一个类，只有一个方法，所以类和方法都可以不用，只留方法后面的东西
          */
-        like = ()->{
+        like = () -> {
             System.out.println("I Like Lambda5");
         };
+        like.lambda();
+
+        /***
+         * 6、当花括号里面只有一条语句时，可以省略花括号，只有一条语句时，才可以省略，一般情况下是不可能存在的
+         */
+        like = () -> System.out.println("I Like Lambda6");
         like.lambda();
     }
 }
