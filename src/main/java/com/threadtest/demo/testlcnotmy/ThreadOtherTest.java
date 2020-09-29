@@ -1,4 +1,4 @@
-package com.threadtest.demo.sss;
+package com.threadtest.demo.testlcnotmy;
 
 import org.junit.Test;
 
@@ -13,7 +13,7 @@ import java.util.concurrent.*;
  * join()方法底层就是通过wait()/notifyAll()来实现线程的通信从而达到线程阻塞的目的
  * @author shang
  */
-public class ThreadNotMyTest {
+public class ThreadOtherTest {
 
     /***
      * 实现Runnable接口
