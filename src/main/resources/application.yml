@@ -1,0 +1,10 @@
+spring:
+  application:
+    name: study-springboot2-statemachine
+
+logging:
+  config: classpath:log4j2.xml
+  level:
+    com.feiynn: debug
+    test: debug
+
