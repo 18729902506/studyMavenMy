@@ -1,4 +1,4 @@
-package com.threadtest.demo.sss3.test1;
+package com.threadtest.demo.sss3.threadpooltest1;
 
 /***
  * @author shang
