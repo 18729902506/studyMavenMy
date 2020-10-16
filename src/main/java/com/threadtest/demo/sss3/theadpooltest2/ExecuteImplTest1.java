@@ -17,7 +17,7 @@ public class ExecuteImplTest1 {
     private ThreadPoolTaskExecutor taskExecutor;
 
     /***
-     * 无返回值的任务调用execute()方法，
+     * 无返回值的任务提交，调用execute()方法，
      * 无返回值，在定时器中可能出现子线程卡死的情况
      */
     public void testExecuteMethod(){
@@ -30,7 +30,7 @@ public class ExecuteImplTest1 {
     }
 
     /***
-     * 有返回值的任务使用submit()方法
+     * 有返回值的任务提交，调用submit()方法
      * @return
      * @throws ExecutionException
      * @throws InterruptedException

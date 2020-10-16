@@ -32,6 +32,10 @@ public class ExecutorConfig {
         //配置线程池中的线程的名称前缀
         executor.setThreadNamePrefix("async-service-");
 
+        //线程池满了，可以进行拒绝策略，AbortPolicy，用于被拒绝任务的处理程序，它将抛出RejectedExecutionException
+        //用于配置拒绝策略，    对拒绝任务抛弃处理，并且抛出异常
+        executor.setRejectedExecutionHandler(new ThreadPoolExecutor.AbortPolicy());
+
         // rejection-policy：当pool已经达到max size的时候，如何处理新任务
         // CALLER_RUNS：不在新线程中执行任务，而是有调用者所在的线程来执行
         executor.setRejectedExecutionHandler(new ThreadPoolExecutor.CallerRunsPolicy());
