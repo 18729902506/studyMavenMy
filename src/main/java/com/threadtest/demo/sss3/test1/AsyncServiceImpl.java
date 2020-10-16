@@ -1,4 +1,4 @@
-package com.threadtest.demo.sss3.service;
+package com.threadtest.demo.sss3.test1;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

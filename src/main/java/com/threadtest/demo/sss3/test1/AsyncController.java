@@ -1,6 +1,5 @@
-package com.threadtest.demo.sss3.controller;
+package com.threadtest.demo.sss3.test1;
 
-import com.threadtest.demo.sss3.service.AsyncService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.web.bind.annotation.RequestMapping;
