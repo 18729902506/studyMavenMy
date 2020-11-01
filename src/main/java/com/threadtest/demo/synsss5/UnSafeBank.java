@@ -20,7 +20,7 @@ public class UnSafeBank {
 }
 
 /**
- * 账户
+ * 账户类
  */
 class Account{
     int money;
