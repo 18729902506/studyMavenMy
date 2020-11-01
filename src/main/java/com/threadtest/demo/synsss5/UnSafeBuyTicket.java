@@ -31,7 +31,11 @@ class BuyTicket implements Runnable{
         }
     }
 
-    private void buy(){
+    /**
+     * synchronized 同步方法，用这个方法的人都会去拿对象的锁，就是buy()方法的对象，就是BuyTicket对象本身
+     * 锁的是this
+     */
+    private synchronized void buy(){
         //判断是否有票
         if (ticketNums <= 0){
             flag = false;

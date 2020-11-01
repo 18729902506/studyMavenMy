@@ -15,7 +15,10 @@ public class UnSafeList {
         //开启一万个线程，把线程的名字添加到集合中
         for (int i = 0; i < 10000; i++) {
             new Thread(() ->{
-                list.add(Thread.currentThread().getName());
+                //锁成功了，就是一万
+                synchronized (list){
+                    list.add(Thread.currentThread().getName());
+                }
             }).start();
         }
         try {
