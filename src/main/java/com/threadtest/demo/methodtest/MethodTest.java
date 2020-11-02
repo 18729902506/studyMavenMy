@@ -1,4 +1,4 @@
-package com.threadtest.demo.mdctest;
+package com.threadtest.demo.methodtest;
 
 import java.util.HashMap;
 import java.util.Map;
