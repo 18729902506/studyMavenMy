@@ -6,6 +6,7 @@ import org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
+import java.util.List;
 import java.util.concurrent.*;
 
 @Service
@@ -48,4 +49,16 @@ public class ExecuteImplTest1 {
         return future.get(30, TimeUnit.SECONDS);
     }
 
+    /***
+     * 关闭线程的方法
+     * shutdown()
+     * shutdownNow()
+     */
+    public void closeThread(){
+        ExecutorService pool = null;
+        //尝试停止所有线程，返回未执行任务的列表
+        List<Runnable> runnables = pool.shutdownNow();
+        //中断所有没有执行任务的线程，并将剩余的任务执行完
+        pool.shutdown();
+    }
 }
