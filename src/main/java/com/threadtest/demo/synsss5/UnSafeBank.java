@@ -19,9 +19,7 @@ public class UnSafeBank {
     }
 }
 
-/**
- * 账户类
- */
+/**账户类*/
 class Account{
     int money;
     String name;
@@ -34,19 +32,13 @@ class Account{
 
 class Drawing extends Thread{
 
-    /**
-     * 账户
-     */
+    /**账户*/
     Account account;
 
-    /**
-     * 取了多少钱
-     */
+    /**取了多少钱*/
     int drawingMoney;
 
-    /**
-     * 现在手里有多少钱
-     */
+    /**现在手里有多少钱*/
     int nowMoney;
 
     public Drawing(Account account, int drawingMoney, String name) {

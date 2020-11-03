@@ -3,6 +3,7 @@ package com.threadtest.demo.synsss5;
 /***
  * 测试生产者消费者模型，利用缓冲区解决：管程法
  * 生产者，消费者，产品，缓冲区
+ * @author shang
  */
 public class TestPc {
 
@@ -15,7 +16,7 @@ public class TestPc {
 
 /**生产者*/
 class Productor extends Thread{
-    SyncContainer container;
+    private SyncContainer container;
     public Productor(SyncContainer container){
         this.container = container;
     }
@@ -32,7 +33,7 @@ class Productor extends Thread{
 
 /**消费者*/
 class Consumer extends Thread{
-    SyncContainer container;
+    private SyncContainer container;
     public Consumer(SyncContainer container){
         this.container = container;
     }
@@ -40,7 +41,7 @@ class Consumer extends Thread{
     @Override
     public void run() {
         for (int i = 0; i < 100; i++) {
-            System.out.println("消费了--->" + container.pop().id + "只鸡");
+            System.out.println("消费了第--->" + container.pop().id + "只鸡");
         }
     }
 }
@@ -59,10 +60,10 @@ class  Chicken{
 class SyncContainer{
 
     /**需要一个容器大小*/
-    Chicken[] chickens = new Chicken[10];
+    private Chicken[] chickens = new Chicken[10];
 
     /**容器计数器*/
-    int count = 0;
+    private int count = 0;
 
     /**生产者放入产品*/
     public synchronized void push(Chicken chicken){
@@ -94,7 +95,7 @@ class SyncContainer{
                 e.printStackTrace();
             }
         }
-        //如果可以消费，就去消费
+        //如果count!=0,也就是有东西消费消费，就去消费
         count--;
         Chicken chicken = chickens[count];
         //吃完了，通知生产者生产

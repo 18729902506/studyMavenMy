@@ -13,35 +13,25 @@ public class DeadLock {
     }
 }
 
-/***
- * 口红
- */
+/**口红*/
 class Lipstick{
 
 }
 
-/**
- * 镜子
- */
+/**镜子*/
 class Mirror{
 
 }
 
 class Makeup extends Thread{
-    /**
-     * 需要的资源只有一份用static来保证只有一份
-     */
+    /**需要的资源只有一份用static来保证只有一份*/
     static Lipstick lipstick = new Lipstick();
     static Mirror mirror = new Mirror();
 
-    /**
-     * 选择
-     */
+    /**选择*/
     int choice;
 
-    /**
-     * 使用化妆品的人
-     */
+    /**使用化妆品的人*/
     String girlName;
 
     Makeup(int choice, String girlName){
@@ -58,9 +48,7 @@ class Makeup extends Thread{
         }
     }
 
-    /**
-     * 化妆，互相持有对方的锁，就是需要拿到对方的资源
-     */
+    /**化妆，互相持有对方的锁，就是需要拿到对方的资源*/
 //    private void makeup() throws InterruptedException {
 //        if (choice == 0){
 //            //获得口红的锁
