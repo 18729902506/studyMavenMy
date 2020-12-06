@@ -4,6 +4,7 @@ package com.juctest.demo;
  * 真正的多线程开发，公司中的开发
  * 线程就是一个单独的资源类，没有任何的附属操作，就是属性和方法
  * 三个线程同时去卖票
+ * 多线程的情况下，不加锁就是不安全的，只要涉及到并发编程，一定要有锁
  * @author shang
  */
 public class SaleTicketDemo01 {
